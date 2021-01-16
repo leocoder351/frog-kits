@@ -1,0 +1,23 @@
+---
+name: Button 按钮
+route: /button
+menu: 通用
+---
+
+import { Playground, Props } from 'docz'
+import { Button } from '../frog-ui/components/';
+import '../frog-ui/components/button/style';
+
+# Button
+按钮用于开始一个即时操作。
+
+<Props of={Button} />
+
+## 基本用法
+
+<Playground>
+  <Button onClick={() => alert('button')}>Click me</Button>
+  <Button type="primary">Click me</Button>
+  <Button type="warning">Click me</Button>
+  <Button type="danger">Click me</Button>
+</Playground>

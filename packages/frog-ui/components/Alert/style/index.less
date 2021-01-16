@@ -1,0 +1,42 @@
+@import '../../style/index.less';
+@import "../../style/color/default";
+
+.j-alert {
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  word-wrap: break-word;
+  border: 1px solid;
+  border-radius: 2px;
+
+  &-success {
+    background: @cyan2;
+    border-color: @cyan4;
+  }
+
+  &-info {
+    background: @blue2;
+    border-color: @blue4;
+  }
+
+  &-warning {
+    background: @yellow2;
+    border-color: @yellow4;
+  }
+
+  &-error {
+    background: @red2;
+    border-color: @red4;
+  }
+}

@@ -1,0 +1,23 @@
+---
+name: Alert 警告提示
+route: /alert
+menu: 反馈
+---
+
+import { Playground, Props } from 'docz'
+import { Alert } from '../frog-ui/components/';
+import '../frog-ui/components/Alert/style';
+
+# Alert
+警告提示，展现需要关注的信息。
+
+<Props of={Alert} />
+
+## 基本用法
+
+<Playground>
+  <Alert message="Success Text" type="success" />
+  <Alert message="Info Text" type="info" />
+  <Alert message="Warning Text" type="warning" />
+  <Alert message="Error Text" type="error" />
+</Playground>
