@@ -2,44 +2,44 @@
 @import "../../style/color/default";
 
 .j-btn {
-  outline: none;
-  margin-right: 8px;
-  margin-bottom: 12px;
-  line-height: 1.5715;
   position: relative;
   display: inline-block;
+  height: 32px;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  padding: 4px 15px;
+  color: rgba(0,0,0,.85);
   font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5715;
   white-space: nowrap;
   text-align: center;
+  background: #fff;
   background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: none;
   box-shadow: 0 2px 0 rgba(0,0,0,.015);
   cursor: pointer;
   transition: all .3s cubic-bezier(.645,.045,.355,1);
   user-select: none;
   touch-action: manipulation;
-  height: 32px;
-  padding: 4px 15px;
-  font-size: 14px;
-  border-radius: 2px;
-  color: rgba(0,0,0,.85);
-  background: #fff;
-  border: 1px solid #d9d9d9;
 
   &-default {
     &:hover {
-      border-color: @blue4;
       color: @blue4;
+      border-color: @blue4;
     }
     &:active {
-      border-color: @blue6;
       color: @blue6;
+      border-color: @blue6;
     }
   }
 
   &-primary {
+    color: #fff;
     background: @blue6;
     border-color: @blue6;
-    color: #fff;
     &:hover {
       background: @blue5;
     }
@@ -49,9 +49,9 @@
   }
 
   &-warning {
+    color: #fff;
     background: @yellow6;
     border-color: @yellow6;
-    color: #fff;
     &:hover {
       background: @yellow5;
     }
@@ -61,9 +61,9 @@
   }
 
   &-danger {
+    color: #fff;
     background: @red6;
     border-color: @red6;
-    color: #fff;
     &:hover {
       background: @red5;
     }
