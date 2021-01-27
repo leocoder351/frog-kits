@@ -35,7 +35,7 @@
     "build:es": "rm -rf es && cross-env ENV_ES=true gulp"
   },
   "lint-staged": {
-    "components/**/*.ts?(x)": [
+    "components/**/*.js": [
       "prettier --write",
       "eslint --fix",
       "git add"
