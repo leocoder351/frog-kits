@@ -37,12 +37,10 @@
   "lint-staged": {
     "components/**/*.js": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "components/**/**/*.less": [
-      "stylelint --syntax less --fix",
-      "git add"
+      "stylelint --syntax less --fix"
     ]
   },
   "husky": {
