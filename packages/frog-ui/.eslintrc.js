@@ -1,6 +1,19 @@
 module.exports = {
-  extends: [require.resolve('@umijs/fabric/dist/eslint')],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    require.resolve('@umijs/fabric/dist/eslint'),
+    'prettier/@typescript-eslint',
+    'plugin:react/recommended'
+  ],
   rules: {
-    'no-unused-expressions': ['error', { 'allowShortCircuit': true }]
+    'react/prop-types': 'off',
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": ["error", { "allowShortCircuit": true }]
+  },
+  ignorePatterns: ['.eslintrc.js'],
+  settings: {
+    react: {
+      version: "detect"
+    }
   }
-};
+}

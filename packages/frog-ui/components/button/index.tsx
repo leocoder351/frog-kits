@@ -1,10 +1,12 @@
 import React from 'react';
-import t from 'prop-types';
 import classNames from 'classnames';
 
-const Button = (props) => {
-  const { children, type, onClick } = props;
+type Props = {
+  type: 'default' | 'primary' | 'danger' | 'warning';
+  onClick: () => void;
+};
 
+const Button: React.FC<Props> = ({ children, type = 'default', onClick }) => {
   const handleClick = () => {
     onClick && onClick();
   };
@@ -19,15 +21,6 @@ const Button = (props) => {
       {children}
     </button>
   );
-};
-
-Button.propTypes = {
-  type: t.oneOf(['default', 'primary', 'danger', 'warning']),
-  onClick: t.func,
-};
-
-Button.defaultProps = {
-  type: 'default',
 };
 
 export default Button;
