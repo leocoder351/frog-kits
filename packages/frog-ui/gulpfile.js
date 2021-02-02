@@ -20,7 +20,7 @@ const LIB_DIR = 'lib';
 const ES_DIR = 'es';
 
 function _compileJS() {
-  return src(['components/**/*.tsx', 'components/**/*.ts', 'components/**/*.js'])
+  return src(['components/**/*.{tsx, ts, js}', '!components/**/__tests__/*.{tsx, ts, js}'])
     .pipe(
       babel({
         presets: [

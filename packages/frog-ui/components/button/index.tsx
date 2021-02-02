@@ -2,13 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 
 type Props = {
-  type: 'default' | 'primary' | 'danger' | 'warning';
+  type?: 'default' | 'primary' | 'danger' | 'warning';
   onClick: () => void;
 };
 
 const Button: React.FC<Props> = ({ children, type = 'default', onClick }) => {
   const handleClick = () => {
-    onClick && onClick();
+    onClick();
   };
 
   return (

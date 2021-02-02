@@ -7,7 +7,7 @@ const image = require('@rollup/plugin-image');
 const { DIST_DIR, DIST_NAME } = require('./constant');
 
 module.exports = {
-  input: 'components/index.js',
+  input: 'components/index.tsx',
   output: {
     name: 'Frog',
     file: `${DIST_DIR}/${DIST_NAME}.js`,
