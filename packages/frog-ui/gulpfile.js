@@ -127,12 +127,12 @@ async function _compileDistJS() {
   const inputOptions = rollupConfig;
   const outputOptions = rollupConfig.output;
 
-  // 打包 homed.js
+  // 打包 frog.js
   const bundle = await rollup.rollup(inputOptions);
   await bundle.generate(outputOptions);
   await bundle.write(outputOptions);
 
-  // 打包 homed.min.js
+  // 打包 frog.min.js
   inputOptions.plugins.push(terser());
   outputOptions.file = `${DIST_DIR}/${DIST_NAME}.min.js`;
 

@@ -10,7 +10,7 @@ module.exports = {
     "no-unused-expressions": "off",
     "@typescript-eslint/no-unused-expressions": ["error", { "allowShortCircuit": true }]
   },
-  ignorePatterns: ['.eslintrc.js', 'build', 'es', 'lib', 'dist'],
+  ignorePatterns: ['.eslintrc.js', 'gulpfile.js', 'build', 'es', 'lib', 'dist'],
   settings: {
     react: {
       version: "detect"

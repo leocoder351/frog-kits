@@ -2,7 +2,7 @@
 
 exports[`Component <Button /> Test should render default 1`] = `
 <button
-  className="j-btn j-btn-default"
+  className="frog-btn frog-btn-default"
   onClick={[Function]}
 >
   default
@@ -12,25 +12,25 @@ exports[`Component <Button /> Test should render default 1`] = `
 exports[`Component <Button /> Test should render specific type 1`] = `
 Array [
   <button
-    className="j-btn j-btn-default"
+    className="frog-btn frog-btn-default"
     onClick={[Function]}
   >
     default
   </button>,
   <button
-    className="j-btn j-btn-primary"
+    className="frog-btn frog-btn-primary"
     onClick={[Function]}
   >
     primary
   </button>,
   <button
-    className="j-btn j-btn-danger"
+    className="frog-btn frog-btn-danger"
     onClick={[Function]}
   >
     danger
   </button>,
   <button
-    className="j-btn j-btn-warning"
+    className="frog-btn frog-btn-warning"
     onClick={[Function]}
   >
     warning

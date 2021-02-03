@@ -55,6 +55,12 @@ const updatePkgVersion = async nextVersion => {
   logTime('Update package.json version', 'end');
 };
 
+const test = async () => {
+  logTime('Test', 'start');
+  await run(`yarn test:coverage`);
+  logTime('Test', 'end');
+};
+
 const genChangelog = async () => {
   logTime('Generate CHANGELOG.md', 'start');
   await run(' npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0');
@@ -64,7 +70,7 @@ const genChangelog = async () => {
 const push = async nextVersion => {
   logTime('Push Git', 'start');
   await run('git add .');
-  await run(`git commit -m "v${nextVersion}" -n`);
+  await run(`git commit -m "publish frog-ui@${nextVersion}" -n`);
   await run('git push');
   logTime('Push Git', 'end');
 };
@@ -72,7 +78,7 @@ const push = async nextVersion => {
 const tag = async nextVersion => {
   logTime('Push Git', 'start');
   await run(`git tag v${nextVersion}`);
-  await run(`git push origin tag v${nextVersion}`);
+  await run(`git push origin tag frog-ui@${nextVersion}`);
   logTime('Push Git Tag', 'end');
 };
 
@@ -93,6 +99,7 @@ const main = async () => {
     const nextVersion = await promptNextVersion();
     const startTime = Date.now();
 
+    await test();
     await updatePkgVersion(nextVersion);
     await genChangelog();
     await push(nextVersion);
@@ -100,10 +107,10 @@ const main = async () => {
     await publish();
     await tag(nextVersion);
 
-    console.log(chalk.bgGreen(`Publish Success, Cost ${((Date.now() - startTime) / 1000).toFixed(3)}s`));
+    console.log(chalk.green(`Publish Success, Cost ${((Date.now() - startTime) / 1000).toFixed(3)}s`));
   } catch (err) {
-    console.log(chalk.bgRed(`Publish Fail: ${err}`));
+    console.log(chalk.red(`Publish Fail: ${err}`));
   }
 }
 
-main()
+main();

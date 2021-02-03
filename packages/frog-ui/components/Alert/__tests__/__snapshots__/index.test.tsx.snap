@@ -2,7 +2,7 @@
 
 exports[`Component <Alert /> Test should render default 1`] = `
 <div
-  className="j-alert j-alert-default"
+  className="frog-alert frog-alert-default"
 >
   default
 </div>
@@ -11,22 +11,22 @@ exports[`Component <Alert /> Test should render default 1`] = `
 exports[`Component <Alert /> Test should render specific type 1`] = `
 Array [
   <div
-    className="j-alert j-alert-success"
+    className="frog-alert frog-alert-success"
   >
     success
   </div>,
   <div
-    className="j-alert j-alert-info"
+    className="frog-alert frog-alert-info"
   >
     info
   </div>,
   <div
-    className="j-alert j-alert-warning"
+    className="frog-alert frog-alert-warning"
   >
     warning
   </div>,
   <div
-    className="j-alert j-alert-error"
+    className="frog-alert frog-alert-error"
   >
     error
   </div>,

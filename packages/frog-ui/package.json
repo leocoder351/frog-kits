@@ -27,8 +27,9 @@
     "docz:serve": "docz build && docz serve",
     "build": "yarn build:dist && yarn build:lib && yarn build:es",
     "build:dist": "rm -rf dist && gulp compileDistTask",
-    "build:lib": "rm -rf lib && cross-env gulp",
-    "build:es": "rm -rf es && cross-env ENV_ES=true gulp"
+    "build:lib": "rm -rf lib && gulp",
+    "build:es": "rm -rf es && cross-env ENV_ES=true gulp",
+    "publish": "node build/release.js"
   },
   "lint-staged": {
     "components/**/*.ts?(x)": [
